@@ -15,10 +15,22 @@
     color: white;
     border-radius: 10px;
     padding: 10px;
+}
 
+#root {
+    text-align: center;
 }
 
 body {
-
     background-color: rgba(82, 77, 129, 0.671);
+}
+
+
+#progbar {
+    font-family: sans-serif;
+    height: 20px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+    width: 10%;
+    border-radius: 5px;
 }
