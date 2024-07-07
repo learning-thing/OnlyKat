@@ -1,5 +1,9 @@
-var x = 1;
-var clickCount = 0;
+var x = Number(document.cookie.valueOf("clicks").split("=")[1]);
+var clickCount = x;
+
+console.log(document.cookie.valueOf("clicks"));
+console.log(Number(document.cookie.valueOf("clicks").split("=")[1]));
+console.log(x);
 
 function ClickMeFunc() {
     clickCount++;
@@ -19,21 +23,25 @@ function ClickMeFunc() {
     } else {
         x = 0;
     }
-    console.log("X is zero");
     document.getElementById("title").innerHTML = "Kat Level: "+(clickCount+1);
     document.getElementById("title").style.marginLeft = ((x+1)*20) + "px";
 
     document.getElementById("clickme").style.marginLeft = ((x+1)*20) + "px";
     document.getElementById("progbar").innerHTML = "Progress: " + (clickCount) + "%";
-    document.getElementById("progbar").style.width = (clickCount) + "%";
+    
+    if (clickCount > 12) {
+        document.getElementById("progbar").style.width = (12+clickCount) + "%";
+    }
     if (clickCount == 100) {
+        document.cookie = "clicks=10;";
         winner();
     }
 }
 
 
 function winner() {
-    alert("Winner");
+    alert("You're a Winner!");
+    console.log("Winner!");
 }
 
 //#initmethod();
