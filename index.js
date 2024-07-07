@@ -26,7 +26,7 @@ function ClickMeFunc() {
     document.getElementById("clickme").style.marginLeft = ((x+1)*20) + "px";
     document.getElementById("progbar").innerHTML = "Progress: " + (clickCount) + "%";
     document.getElementById("progbar").style.width = (clickCount) + "%";
-    if (clickCount == 9) {
+    if (clickCount == 100) {
         winner();
     }
 }
