@@ -48,6 +48,19 @@ function ClickMeFunc() {
         winner();
     }
 
+
+    //Click Power
+    
+    if (document.getElementById("boostCode").value == "car") {
+        clickPower = 10;
+    }
+    if (document.getElementById("boostCode").value == "Tinolm") {
+        clickPower = 5;
+    }
+    if (document.getElementById("boostCode").value == "040david") {
+        clickPower = 3;
+    }
+
 }
 
 window.onbeforeunload = closingCode;
