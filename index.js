@@ -6,14 +6,19 @@ if (document.cookie.length > 1) {
     var clickCount = 0;
 }
 
+let clickPower = 1;
 console.log(document.cookie.valueOf("clicks"));
 console.log(Number(document.cookie.valueOf("clicks").split("=")[1]));
 console.log(x);
 
 document.getElementById("LastKat").innerHTML = "Last Kat level: " + (clickCount);
+if (clickCount > 12) {
+    document.getElementById("progbar").style.width = (clickCount) + "%";
+}
+
 
 function ClickMeFunc() {
-    clickCount++;
+    clickCount+=clickPower;
     if (clickCount == 1) {
         document.getElementById("clickme").innerHTML = "Clicked once";;
     } else {
@@ -67,7 +72,6 @@ function ResetClicks() {
     document.getElementById("title").style.marginLeft = "0px";
     document.getElementById("clickme").style.marginLeft = "0px";
     document.getElementById("LastKat").innerHTML = "Last Kat level: 0";
-
 }
 
 //#initmethod();

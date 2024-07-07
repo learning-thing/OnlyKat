@@ -50,6 +50,22 @@ body {
     border-radius: 5px;
 }
 
+label {
+    font-family: sans-serif;
+    color: white;
+}
+
+#boostCode {
+    font-family: sans-serif;
+    color: white;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: dotted;
+    width: 100px;
+    height: 20px;
+    background-color: gray;
+}
+
 @keyframes fall {
     0% {
         top: 0;
