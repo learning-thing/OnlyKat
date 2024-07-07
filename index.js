@@ -12,8 +12,12 @@ console.log(Number(document.cookie.valueOf("clicks").split("=")[1]));
 console.log(x);
 
 document.getElementById("LastKat").innerHTML = "Last Kat level: " + (clickCount);
-if (clickCount > 12) {
+if (clickCount > 12 && clickCount < 100) {
     document.getElementById("progbar").style.width = (clickCount) + "%";
+} else {
+    document.getElementById("progbar").style.width = 100 + "%";
+    document.getElementById("progbar").style.height = (clickCount-100) + "px";
+
 }
 
 
@@ -41,13 +45,16 @@ function ClickMeFunc() {
     document.getElementById("clickme").style.marginLeft = ((x+1)*20) + "px";
     document.getElementById("progbar").innerHTML = "Progress: " + (clickCount) + "%";
     
-    if (clickCount > 12) {
+    if (clickCount > 12 && clickCount < 100) {
         document.getElementById("progbar").style.width = (clickCount) + "%";
+    } else {
+        if (clickCount > 100) {
+            document.getElementById("progbar").style.height = (clickCount-100) + "px";
+        }
     }
     if (clickCount == 100) {
         winner();
     }
-
 
     //Click Power
     
