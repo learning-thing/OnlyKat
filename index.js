@@ -92,6 +92,8 @@ function ResetClicks() {
     document.getElementById("title").style.marginLeft = "0px";
     document.getElementById("clickme").style.marginLeft = "0px";
     document.getElementById("LastKat").innerHTML = "Last Kat level: 0";
+    document.getElementById("progbar").style.height = 12 + "px";
+
 }
 
 //#initmethod();
