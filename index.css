@@ -8,7 +8,7 @@
     transition-duration: .4s;
 }
 
-#clickme {
+.prettybtn {
     font-family: sans-serif;
     transition-duration: 1s;
     background-color: black;
@@ -46,7 +46,8 @@ body {
     pointer-events: none;
     width: 10px;
     height: 10px;
-    background-color: aqua;
+    background-color: transparent;
+    border-radius: 5px;
 }
 
 @keyframes fall {
