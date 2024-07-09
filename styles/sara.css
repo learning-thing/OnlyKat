@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css?family=Noto%20Serif%20Tibetan:700|Noto%20Serif%20Tibetan:400');
+:root {
+    --text: #ffd1dc;
+    --background: rgb(15, 9, 10);
+    --primary: rgb(213, 156, 163);
+    --secondary: rgb(172, 45, 62);
+    --accent: #ffd1dc;    
+}
+
+body {
+    font-family: 'Noto Serif Tibetan';
+    font-weight: 400;
+    background-color: var(--background);
+
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Noto Serif Tibetan';
+  font-weight: 50;
+}
+
+html {font-size: 100%;} /* 16px */
+
+h1 {
+    text-align: center;
+    font-size: 4.210rem; /* 67.36px */
+    color: var(--text);
+    margin-top: -25px;
+    margin-bottom: -50px;
+    
+}
+
+h2 {font-size: 3.158rem; /* 50.56px */
+    color: var(--text);
+}
+
+h3 {font-size: 2.369rem; /* 37.92px */
+    color: var(--text);
+}
+
+h4 {font-size: 1.777rem; /* 28.48px */
+    color: var(--text);
+}
+
+h5 {font-size: 1.333rem; /* 21.28px */
+    color: var(--text);
+}
+
+
+
+#topbar {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border-color: var(--accent);
+    border-style: dotted;
+    color: var(--text);
+    width: 99%;
+    margin: auto;
+}
+
+#PrettyPlayerSpawner {
+    font-family: sans-serif;
+    transition-duration: 1.6s;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+}
+#PrettyPlayerSpawner:hover {
+    color: var(--accent);
+    transform: scale(1.1);
+}
+
+
+#SaravidC {
+    width: 80%;
+    height: 10px;
+    background-color: var(--background);
+    transition: .5s;
+}
+
+/*
+#SaravidC:hover {
+    width: 20%;
+    height: 90%;
+    border-radius: ;
+}*/
+
+
+
+#Gallerya {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--primary);
+    border-color: var(--accent);
+    border-radius: 10px;
+    height: 200px;
+
+    padding: 5px;
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: unblur 2s;
+}
+
+#GalleryV {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--primary);
+    border-color: var(--accent);
+    border-radius: 10px;
+    /*height: 200px;*/
+    height: auto;
+
+    padding: 5px;
+    margin-top: 100px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    animation: unblur 2s;
+}
+
+#Gallerya img {
+    width: 250px;
+    margin: 10px;
+    transition-duration: 0.6s;
+    border-radius: 10px;
+}
+
+#Gallerya img:hover {
+    width: 400px;
+}
+
+@keyframes unblur {
+    from {
+        filter: blur(5px);
+        opacity: 0.5;
+        transform: scale(2) translateY(100px) rotatey(90deg);
+    }
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.fixednav {
+    position: fixed;
+    top: 0;
+}
+.staticnav {
+    position: static;
+}

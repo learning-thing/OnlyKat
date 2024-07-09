@@ -15,9 +15,7 @@ document.getElementById("LastKat").innerHTML = "Last Kat level: " + (clickCount)
 if (clickCount > 12 && clickCount < 100) {
     document.getElementById("progbar").style.width = (clickCount) + "%";
 } else {
-    document.getElementById("progbar").style.width = 100 + "%";
     document.getElementById("progbar").style.height = (clickCount-100) + "px";
-
 }
 
 
@@ -52,7 +50,7 @@ function ClickMeFunc() {
             document.getElementById("progbar").style.height = (clickCount-100) + "px";
         }
     }
-    if (clickCount == 100) {
+    if (clickCount >= 100) {
         winner();
     }
 
@@ -79,7 +77,19 @@ document.cookie = "clicks="+(clickCount+1)+";";
 function winner() {
     alert("You're a Winner!");
     console.log("Winner!");
+    pop_links();
 }
+
+
+function pop_links() {//pop up links for the other sites
+    const linktext = document.createTextNode("Nyra")
+    const linka = document.createElement("a");
+    linka.appendChild(linktext);
+    linka.id = "Sarabtn";
+    linka.href = "Sara.html";
+    document.getElementById("root").appendChild(linka);
+}
+
 
 function ResetClicks() {
     clickCount = 0;
@@ -93,7 +103,6 @@ function ResetClicks() {
     document.getElementById("clickme").style.marginLeft = "0px";
     document.getElementById("LastKat").innerHTML = "Last Kat level: 0";
     document.getElementById("progbar").style.height = 12 + "px";
-
 }
 
 //#initmethod();

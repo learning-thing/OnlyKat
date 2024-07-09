@@ -19,6 +19,7 @@
 
 #root {
     text-align: center;
+    transition-duration: .4s;
 }
 
 body {
@@ -64,6 +65,18 @@ label {
     width: 100px;
     height: 20px;
     background-color: gray;
+}
+
+#Sarabtn {
+    font-family: sans-serif;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: dotted;
+    width: 100px;
+    height: 20px;
+    color: rgb(255, 205, 230);
+    margin-top: 100px;
+    text-align: left;
 }
 
 @keyframes fall {
