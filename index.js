@@ -15,7 +15,13 @@ document.getElementById("LastKat").innerHTML = "Last Kat level: " + (clickCount)
 if (clickCount > 12 && clickCount < 100) {
     document.getElementById("progbar").style.width = (clickCount) + "%";
 } else {
-    document.getElementById("progbar").style.height = (clickCount-100) + "px";
+    if (clickCount < 12) {
+        document.getElementById("progbar").style.width = "12%";
+    } else {
+        if (clickCount > 100) {
+            document.getElementById("progbar").style.width = clickCount + "px";
+        }
+    }
 }
 
 
@@ -102,7 +108,7 @@ function ResetClicks() {
     document.getElementById("title").style.marginLeft = "0px";
     document.getElementById("clickme").style.marginLeft = "0px";
     document.getElementById("LastKat").innerHTML = "Last Kat level: 0";
-    document.getElementById("progbar").style.height = 12 + "px";
+    document.getElementById("progbar").style.height = 22 + "px";
 }
 
 //#initmethod();
