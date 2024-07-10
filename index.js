@@ -1,3 +1,4 @@
+
 if (document.cookie.length > 1) {
     var x = Number(document.cookie.valueOf("clicks").split("=")[1])-1;
     var clickCount = x;
