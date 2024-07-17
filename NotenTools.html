@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/lib/jquery-3.7.1.min.js"></script>
+        <title>NotenTools</title>
+        <link rel="stylesheet" href="styles/calculator.css">
+    </head>
+    <body>
+        <h1>15er zu 6er System</h1>
+        <form>
+            <input type="text" name="" id="getNote">
+        </form>
+        <button onclick="NotenOutput_15_6()">GO!</button>
+        <h2 id="NotenOut"></h2>
+
+
+        <h1>6er zu 15er System</h1>
+        <button onclick="NotenOutput_6_15()">GO!</button>
+
+        <h1>Notenschnitt Berechenn</h1>
+        </br>
+
+        <button id="AddAVG" onclick="AddUpAVG()">Add</button>
+        </br>
+        <button id="ResetAVG" onclick="ResetAVG()">Reset</button>
+        
+        <form>
+            <input type="text" name="" id="NextAVG">
+        </form>
+        <h2 id="avglist" style="max-width: 10px;"></h2>
+    </body>
+    <script src="js/TNTools.js"></script>
+</html>

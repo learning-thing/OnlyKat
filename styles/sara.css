@@ -1,17 +1,36 @@
 @import url('https://fonts.googleapis.com/css?family=Noto%20Serif%20Tibetan:700|Noto%20Serif%20Tibetan:400');
+
 :root {
     --text: #ffd1dc;
     --background: rgb(15, 9, 10);
     --primary: rgb(213, 156, 163);
     --secondary: rgb(172, 45, 62);
-    --accent: #ffd1dc;    
+    --accent: #e09cac;    
+    --accent2:rgb(38, 255, 56);    
 }
+
+/*
+:root {/*More red
+    --text: #ece6e7;
+    --background: #0f090a;
+    --primary: #d59ca3;
+    --secondary: #ac2d3e;
+    --accent: #db3c52;
+}*/
+
+/*
+:root {
+    --text: #f8e6f3;
+    --background: #12050f;
+    --primary: #e398d1;
+    --secondary: #8c4625;
+    --accent: #67ed58;
+}*/
 
 body {
     font-family: 'Noto Serif Tibetan';
     font-weight: 400;
     background-color: var(--background);
-
 }
 
 h1, h2, h3, h4, h5 {
@@ -27,7 +46,6 @@ h1 {
     color: var(--text);
     margin-top: -25px;
     margin-bottom: -50px;
-    
 }
 
 h2 {font-size: 3.158rem; /* 50.56px */
@@ -46,23 +64,22 @@ h5 {font-size: 1.333rem; /* 21.28px */
     color: var(--text);
 }
 
-
-
 #topbar {
     background-color: transparent;
-    /*backdrop-filter: blur(10px);*/
+    backdrop-filter: blur(5px);
     border-color: var(--accent);
     border-style: dotted;
     color: var(--text);
     width: 99%;
     margin: auto;
+    z-index: 9999;
 }
 
 #PrettyPlayerSpawner {
     font-family: sans-serif;
-    transition-duration: 1.6s;
+    transition-duration: 0.6s;
     background-color: black;
-    color: white;
+    color: var(--accent2);
     border-radius: 10px;
     padding: 10px;
     margin: auto;
@@ -95,23 +112,23 @@ iframe {
 
 
 #Gallerya {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: var(--primary);
-    border-color: var(--accent);
+    /*background-color: var(--primary);*/
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent2) 500%);
+    
+    border-color: var(--accent2);
     border-radius: 10px;
     height: 200px;
-
     padding: 5px;
     margin-top: 100px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
     animation: unblur 2s;
+
+
 }
 
 #GalleryV {
@@ -132,7 +149,7 @@ iframe {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    animation: unblur 2s;
+    animation: unblur 1s;
     transition-duration: 4s;
 }
 
@@ -141,6 +158,8 @@ iframe {
     margin: 10px;
     transition-duration: 0.6s;
     border-radius: 10px;
+    border-color: var(--accent2);
+    border: 2px solid var(--accent2); 
 }
 
 #Gallerya img:hover {
@@ -150,11 +169,12 @@ iframe {
 @keyframes unblur {
     from {
         /*filter: blur(2px);*/
-        opacity: 0.5;
+        opacity: 0.1;
         transform: scale(.5);
-
+        margin-bottom: 200px;
     }
     to {
+        margin-bottom: 0px;
         filter: blur(0px);
         opacity: 1;
         transform: scale(1);
@@ -174,11 +194,27 @@ iframe {
     top: 10;
     left: 10;
     animation: fall 5s linear forwards;
-    width: 20px;
-    height: 20px;
+    width: 3px;
+    height: 3px;
     background-color: white;
     opacity: 0;
     border-radius: 5px;
+}
+
+.flexcontainer {
+    display: grid;
+    grid-template-areas:
+      'header header header header header header'
+      'menu main main main right right'
+      'menu footer footer footer footer footer';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.flexcontainer > div {
+    margin: 10px;
+    padding: 10px;
 }
 
 @keyframes fall {

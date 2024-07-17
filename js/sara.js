@@ -1,14 +1,17 @@
+const vidC = document.getElementById("SaravidC");
+const Gallv = document.getElementById("GalleryV");
+const video = document.createElement("iframe");
+
+
 function spawnplayer() {
-    const vidC = document.getElementById("SaravidC");
-    const Gallv = document.getElementById("GalleryV")
-    Gallv.style.width = "50%"
+    
+    Gallv.style.width = "50%";
     Gallv.style.marginRight = "50%"
     
     vidC.style.width = "70%";
     vidC.style.height = "450px";
     vidC.style.borderRadius = "10px";
 
-    const video = document.createElement("iframe");
     video.src = "https://www.youtube.com/embed/vdcddjV0l5o";
     video.allow = "accelerometer; autoplay=true; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     video.frameborder=0;
@@ -16,7 +19,6 @@ function spawnplayer() {
     video.style.width = "100%";
     video.style.height = "100%";
     video.title = "Fairy Tail: Funny Moments";
-
 
     document.getElementById("PrettyPlayerSpawner").remove();
     document.getElementById("SaravidC").appendChild(video);
@@ -29,6 +31,11 @@ function randomRGB() {
     const b = Math.floor(Math.random() * 255);
     return `rgb(${r},${g},${b})`;
 }
+
+
+$(document).scroll(function() {
+    console.log($(document).scrollTop());
+})
 
 function confetti() {
     let count = 500;

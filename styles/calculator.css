@@ -1,0 +1,56 @@
+h1 {
+    font-family: sans-serif;
+    margin: auto;
+    color: white;
+}
+
+h2 {
+    font-family: sans-serif;
+    margin-left: 10%;
+    margin-right: 50%;
+    color: white;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    flex-grow: 50%;
+    font-family: sans-serif;
+    transition-duration: 0.6s;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    margin: auto;
+    border: 1px solid white;
+}
+button:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+form {
+    height: 20px;
+    margin-left: 10%;
+    margin-right: 50%;
+}
+
+form input {
+    height: 30px;
+    margin: auto;
+    border-radius: 5%;
+    font-family: sans-serif;
+    color: white;
+    background-color: gray;
+    border: 1px solid white;
+    border-color: white;
+}
+
+p {
+    font-family: white;
+    color: white;
+}
