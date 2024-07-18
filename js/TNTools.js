@@ -33,8 +33,10 @@ function average() {
 function AddUpAVG() {
     let req = Math.round(document.getElementById("NextAVG").value);
     console.log(avglist);
-    avglist.push(req);
-    liststring += req+"\n";
+    if (req != NaN) {
+        avglist.push(req);
+        liststring += req+"\n";
+    }
     document.getElementById("avglist").innerHTML = liststring+"\n->"+Conv15_6(average());
 }
 
@@ -48,6 +50,7 @@ $(document).ready(function() {
     $(window).keydown(function(event){
       if(event.keyCode == 13) {
         event.preventDefault();
+        AddUpAVG();
         return false;
       }
     });
