@@ -51,6 +51,7 @@ $(document).ready(function() {
       if(event.keyCode == 13) {
         event.preventDefault();
         AddUpAVG();
+        document.getElementById("NextAVG").value = "";
         return false;
       }
     });
